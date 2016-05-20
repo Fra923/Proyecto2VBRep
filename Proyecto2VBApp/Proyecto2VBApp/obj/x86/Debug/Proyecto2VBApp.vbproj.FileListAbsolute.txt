@@ -1,0 +1,9 @@
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\bin\Debug\Proyecto2VBApp.exe
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\bin\Debug\Proyecto2VBApp.pdb
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\bin\Debug\Proyecto2VBApp.xml
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\obj\x86\Debug\Proyecto2VBApp.vbproj.GenerateResource.Cache
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\obj\x86\Debug\Proyecto2VBApp.exe
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\obj\x86\Debug\Proyecto2VBApp.xml
+C:\Users\Franco\Documents\GitHub\Proyecto2VBRep\Proyecto2VBApp\Proyecto2VBApp\obj\x86\Debug\Proyecto2VBApp.pdb
