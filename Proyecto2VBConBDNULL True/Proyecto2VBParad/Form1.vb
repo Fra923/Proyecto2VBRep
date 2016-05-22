@@ -12,4 +12,8 @@
         Me.SalesOrderDetailTableAdapter.Fill(Me.AdventureWorks2008_DataDataSet.SalesOrderDetail)
 
     End Sub
+
+    Private Sub SalesOrderDetailBindingNavigator_RefreshItems(sender As System.Object, e As System.EventArgs) Handles SalesOrderDetailBindingNavigator.RefreshItems
+
+    End Sub
 End Class

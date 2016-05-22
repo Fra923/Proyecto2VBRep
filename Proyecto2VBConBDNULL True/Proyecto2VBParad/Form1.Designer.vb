@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim SalesOrderIDLabel As System.Windows.Forms.Label
         Dim SalesOrderDetailIDLabel As System.Windows.Forms.Label
         Dim CarrierTrackingNumberLabel As System.Windows.Forms.Label
@@ -34,23 +35,22 @@ Partial Class Form1
         Dim LineTotalLabel As System.Windows.Forms.Label
         Dim RowguidLabel As System.Windows.Forms.Label
         Dim ModifiedDateLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.AdventureWorks2008_DataDataSet = New WindowsApplication1.AdventureWorks2008_DataDataSet()
         Me.SalesOrderDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalesOrderDetailTableAdapter = New WindowsApplication1.AdventureWorks2008_DataDataSetTableAdapters.SalesOrderDetailTableAdapter()
         Me.TableAdapterManager = New WindowsApplication1.AdventureWorks2008_DataDataSetTableAdapters.TableAdapterManager()
         Me.SalesOrderDetailBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.SalesOrderDetailBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.SalesOrderIDTextBox = New System.Windows.Forms.TextBox()
         Me.SalesOrderDetailIDTextBox = New System.Windows.Forms.TextBox()
@@ -79,105 +79,6 @@ Partial Class Form1
         CType(Me.SalesOrderDetailBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SalesOrderDetailBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'SalesOrderIDLabel
-        '
-        SalesOrderIDLabel.AutoSize = True
-        SalesOrderIDLabel.Location = New System.Drawing.Point(12, 36)
-        SalesOrderIDLabel.Name = "SalesOrderIDLabel"
-        SalesOrderIDLabel.Size = New System.Drawing.Size(79, 13)
-        SalesOrderIDLabel.TabIndex = 1
-        SalesOrderIDLabel.Text = "Sales Order ID:"
-        '
-        'SalesOrderDetailIDLabel
-        '
-        SalesOrderDetailIDLabel.AutoSize = True
-        SalesOrderDetailIDLabel.Location = New System.Drawing.Point(12, 62)
-        SalesOrderDetailIDLabel.Name = "SalesOrderDetailIDLabel"
-        SalesOrderDetailIDLabel.Size = New System.Drawing.Size(109, 13)
-        SalesOrderDetailIDLabel.TabIndex = 3
-        SalesOrderDetailIDLabel.Text = "Sales Order Detail ID:"
-        '
-        'CarrierTrackingNumberLabel
-        '
-        CarrierTrackingNumberLabel.AutoSize = True
-        CarrierTrackingNumberLabel.Location = New System.Drawing.Point(12, 88)
-        CarrierTrackingNumberLabel.Name = "CarrierTrackingNumberLabel"
-        CarrierTrackingNumberLabel.Size = New System.Drawing.Size(125, 13)
-        CarrierTrackingNumberLabel.TabIndex = 5
-        CarrierTrackingNumberLabel.Text = "Carrier Tracking Number:"
-        '
-        'OrderQtyLabel
-        '
-        OrderQtyLabel.AutoSize = True
-        OrderQtyLabel.Location = New System.Drawing.Point(12, 114)
-        OrderQtyLabel.Name = "OrderQtyLabel"
-        OrderQtyLabel.Size = New System.Drawing.Size(55, 13)
-        OrderQtyLabel.TabIndex = 7
-        OrderQtyLabel.Text = "Order Qty:"
-        '
-        'ProductIDLabel
-        '
-        ProductIDLabel.AutoSize = True
-        ProductIDLabel.Location = New System.Drawing.Point(12, 140)
-        ProductIDLabel.Name = "ProductIDLabel"
-        ProductIDLabel.Size = New System.Drawing.Size(61, 13)
-        ProductIDLabel.TabIndex = 9
-        ProductIDLabel.Text = "Product ID:"
-        '
-        'SpecialOfferIDLabel
-        '
-        SpecialOfferIDLabel.AutoSize = True
-        SpecialOfferIDLabel.Location = New System.Drawing.Point(12, 166)
-        SpecialOfferIDLabel.Name = "SpecialOfferIDLabel"
-        SpecialOfferIDLabel.Size = New System.Drawing.Size(85, 13)
-        SpecialOfferIDLabel.TabIndex = 11
-        SpecialOfferIDLabel.Text = "Special Offer ID:"
-        '
-        'UnitPriceLabel
-        '
-        UnitPriceLabel.AutoSize = True
-        UnitPriceLabel.Location = New System.Drawing.Point(12, 192)
-        UnitPriceLabel.Name = "UnitPriceLabel"
-        UnitPriceLabel.Size = New System.Drawing.Size(56, 13)
-        UnitPriceLabel.TabIndex = 13
-        UnitPriceLabel.Text = "Unit Price:"
-        '
-        'UnitPriceDiscountLabel
-        '
-        UnitPriceDiscountLabel.AutoSize = True
-        UnitPriceDiscountLabel.Location = New System.Drawing.Point(12, 218)
-        UnitPriceDiscountLabel.Name = "UnitPriceDiscountLabel"
-        UnitPriceDiscountLabel.Size = New System.Drawing.Size(101, 13)
-        UnitPriceDiscountLabel.TabIndex = 15
-        UnitPriceDiscountLabel.Text = "Unit Price Discount:"
-        '
-        'LineTotalLabel
-        '
-        LineTotalLabel.AutoSize = True
-        LineTotalLabel.Location = New System.Drawing.Point(12, 244)
-        LineTotalLabel.Name = "LineTotalLabel"
-        LineTotalLabel.Size = New System.Drawing.Size(57, 13)
-        LineTotalLabel.TabIndex = 17
-        LineTotalLabel.Text = "Line Total:"
-        '
-        'RowguidLabel
-        '
-        RowguidLabel.AutoSize = True
-        RowguidLabel.Location = New System.Drawing.Point(12, 270)
-        RowguidLabel.Name = "RowguidLabel"
-        RowguidLabel.Size = New System.Drawing.Size(47, 13)
-        RowguidLabel.TabIndex = 19
-        RowguidLabel.Text = "rowguid:"
-        '
-        'ModifiedDateLabel
-        '
-        ModifiedDateLabel.AutoSize = True
-        ModifiedDateLabel.Location = New System.Drawing.Point(12, 297)
-        ModifiedDateLabel.Name = "ModifiedDateLabel"
-        ModifiedDateLabel.Size = New System.Drawing.Size(76, 13)
-        ModifiedDateLabel.TabIndex = 21
-        ModifiedDateLabel.Text = "Modified Date:"
         '
         'AdventureWorks2008_DataDataSet
         '
@@ -213,34 +114,9 @@ Partial Class Form1
         Me.SalesOrderDetailBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.SalesOrderDetailBindingNavigator.Name = "SalesOrderDetailBindingNavigator"
         Me.SalesOrderDetailBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.SalesOrderDetailBindingNavigator.Size = New System.Drawing.Size(353, 25)
+        Me.SalesOrderDetailBindingNavigator.Size = New System.Drawing.Size(364, 25)
         Me.SalesOrderDetailBindingNavigator.TabIndex = 0
         Me.SalesOrderDetailBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -274,10 +150,17 @@ Partial Class Form1
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -285,7 +168,7 @@ Partial Class Form1
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -294,106 +177,223 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'SalesOrderDetailBindingNavigatorSaveItem
         '
         Me.SalesOrderDetailBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.SalesOrderDetailBindingNavigatorSaveItem.Image = CType(resources.GetObject("SalesOrderDetailBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.SalesOrderDetailBindingNavigatorSaveItem.Name = "SalesOrderDetailBindingNavigatorSaveItem"
-        Me.SalesOrderDetailBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.SalesOrderDetailBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.SalesOrderDetailBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'SalesOrderIDLabel
+        '
+        SalesOrderIDLabel.AutoSize = True
+        SalesOrderIDLabel.Location = New System.Drawing.Point(14, 32)
+        SalesOrderIDLabel.Name = "SalesOrderIDLabel"
+        SalesOrderIDLabel.Size = New System.Drawing.Size(79, 13)
+        SalesOrderIDLabel.TabIndex = 1
+        SalesOrderIDLabel.Text = "Sales Order ID:"
         '
         'SalesOrderIDTextBox
         '
         Me.SalesOrderIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "SalesOrderID", True))
-        Me.SalesOrderIDTextBox.Location = New System.Drawing.Point(143, 33)
+        Me.SalesOrderIDTextBox.Location = New System.Drawing.Point(145, 29)
         Me.SalesOrderIDTextBox.Name = "SalesOrderIDTextBox"
         Me.SalesOrderIDTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SalesOrderIDTextBox.TabIndex = 2
         '
+        'SalesOrderDetailIDLabel
+        '
+        SalesOrderDetailIDLabel.AutoSize = True
+        SalesOrderDetailIDLabel.Location = New System.Drawing.Point(14, 58)
+        SalesOrderDetailIDLabel.Name = "SalesOrderDetailIDLabel"
+        SalesOrderDetailIDLabel.Size = New System.Drawing.Size(109, 13)
+        SalesOrderDetailIDLabel.TabIndex = 3
+        SalesOrderDetailIDLabel.Text = "Sales Order Detail ID:"
+        '
         'SalesOrderDetailIDTextBox
         '
         Me.SalesOrderDetailIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "SalesOrderDetailID", True))
-        Me.SalesOrderDetailIDTextBox.Location = New System.Drawing.Point(143, 59)
+        Me.SalesOrderDetailIDTextBox.Location = New System.Drawing.Point(145, 55)
         Me.SalesOrderDetailIDTextBox.Name = "SalesOrderDetailIDTextBox"
         Me.SalesOrderDetailIDTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SalesOrderDetailIDTextBox.TabIndex = 4
         '
+        'CarrierTrackingNumberLabel
+        '
+        CarrierTrackingNumberLabel.AutoSize = True
+        CarrierTrackingNumberLabel.Location = New System.Drawing.Point(14, 84)
+        CarrierTrackingNumberLabel.Name = "CarrierTrackingNumberLabel"
+        CarrierTrackingNumberLabel.Size = New System.Drawing.Size(125, 13)
+        CarrierTrackingNumberLabel.TabIndex = 5
+        CarrierTrackingNumberLabel.Text = "Carrier Tracking Number:"
+        '
         'CarrierTrackingNumberTextBox
         '
         Me.CarrierTrackingNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "CarrierTrackingNumber", True))
-        Me.CarrierTrackingNumberTextBox.Location = New System.Drawing.Point(143, 85)
+        Me.CarrierTrackingNumberTextBox.Location = New System.Drawing.Point(145, 81)
         Me.CarrierTrackingNumberTextBox.Name = "CarrierTrackingNumberTextBox"
         Me.CarrierTrackingNumberTextBox.Size = New System.Drawing.Size(200, 20)
         Me.CarrierTrackingNumberTextBox.TabIndex = 6
         '
+        'OrderQtyLabel
+        '
+        OrderQtyLabel.AutoSize = True
+        OrderQtyLabel.Location = New System.Drawing.Point(14, 110)
+        OrderQtyLabel.Name = "OrderQtyLabel"
+        OrderQtyLabel.Size = New System.Drawing.Size(55, 13)
+        OrderQtyLabel.TabIndex = 7
+        OrderQtyLabel.Text = "Order Qty:"
+        '
         'OrderQtyTextBox
         '
         Me.OrderQtyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "OrderQty", True))
-        Me.OrderQtyTextBox.Location = New System.Drawing.Point(143, 111)
+        Me.OrderQtyTextBox.Location = New System.Drawing.Point(145, 107)
         Me.OrderQtyTextBox.Name = "OrderQtyTextBox"
         Me.OrderQtyTextBox.Size = New System.Drawing.Size(200, 20)
         Me.OrderQtyTextBox.TabIndex = 8
         '
+        'ProductIDLabel
+        '
+        ProductIDLabel.AutoSize = True
+        ProductIDLabel.Location = New System.Drawing.Point(14, 136)
+        ProductIDLabel.Name = "ProductIDLabel"
+        ProductIDLabel.Size = New System.Drawing.Size(61, 13)
+        ProductIDLabel.TabIndex = 9
+        ProductIDLabel.Text = "Product ID:"
+        '
         'ProductIDTextBox
         '
         Me.ProductIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "ProductID", True))
-        Me.ProductIDTextBox.Location = New System.Drawing.Point(143, 137)
+        Me.ProductIDTextBox.Location = New System.Drawing.Point(145, 133)
         Me.ProductIDTextBox.Name = "ProductIDTextBox"
         Me.ProductIDTextBox.Size = New System.Drawing.Size(200, 20)
         Me.ProductIDTextBox.TabIndex = 10
         '
+        'SpecialOfferIDLabel
+        '
+        SpecialOfferIDLabel.AutoSize = True
+        SpecialOfferIDLabel.Location = New System.Drawing.Point(14, 162)
+        SpecialOfferIDLabel.Name = "SpecialOfferIDLabel"
+        SpecialOfferIDLabel.Size = New System.Drawing.Size(85, 13)
+        SpecialOfferIDLabel.TabIndex = 11
+        SpecialOfferIDLabel.Text = "Special Offer ID:"
+        '
         'SpecialOfferIDTextBox
         '
         Me.SpecialOfferIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "SpecialOfferID", True))
-        Me.SpecialOfferIDTextBox.Location = New System.Drawing.Point(143, 163)
+        Me.SpecialOfferIDTextBox.Location = New System.Drawing.Point(145, 159)
         Me.SpecialOfferIDTextBox.Name = "SpecialOfferIDTextBox"
         Me.SpecialOfferIDTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SpecialOfferIDTextBox.TabIndex = 12
         '
+        'UnitPriceLabel
+        '
+        UnitPriceLabel.AutoSize = True
+        UnitPriceLabel.Location = New System.Drawing.Point(14, 188)
+        UnitPriceLabel.Name = "UnitPriceLabel"
+        UnitPriceLabel.Size = New System.Drawing.Size(56, 13)
+        UnitPriceLabel.TabIndex = 13
+        UnitPriceLabel.Text = "Unit Price:"
+        '
         'UnitPriceTextBox
         '
         Me.UnitPriceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "UnitPrice", True))
-        Me.UnitPriceTextBox.Location = New System.Drawing.Point(143, 189)
+        Me.UnitPriceTextBox.Location = New System.Drawing.Point(145, 185)
         Me.UnitPriceTextBox.Name = "UnitPriceTextBox"
         Me.UnitPriceTextBox.Size = New System.Drawing.Size(200, 20)
         Me.UnitPriceTextBox.TabIndex = 14
         '
+        'UnitPriceDiscountLabel
+        '
+        UnitPriceDiscountLabel.AutoSize = True
+        UnitPriceDiscountLabel.Location = New System.Drawing.Point(14, 214)
+        UnitPriceDiscountLabel.Name = "UnitPriceDiscountLabel"
+        UnitPriceDiscountLabel.Size = New System.Drawing.Size(101, 13)
+        UnitPriceDiscountLabel.TabIndex = 15
+        UnitPriceDiscountLabel.Text = "Unit Price Discount:"
+        '
         'UnitPriceDiscountTextBox
         '
         Me.UnitPriceDiscountTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "UnitPriceDiscount", True))
-        Me.UnitPriceDiscountTextBox.Location = New System.Drawing.Point(143, 215)
+        Me.UnitPriceDiscountTextBox.Location = New System.Drawing.Point(145, 211)
         Me.UnitPriceDiscountTextBox.Name = "UnitPriceDiscountTextBox"
         Me.UnitPriceDiscountTextBox.Size = New System.Drawing.Size(200, 20)
         Me.UnitPriceDiscountTextBox.TabIndex = 16
         '
+        'LineTotalLabel
+        '
+        LineTotalLabel.AutoSize = True
+        LineTotalLabel.Location = New System.Drawing.Point(14, 240)
+        LineTotalLabel.Name = "LineTotalLabel"
+        LineTotalLabel.Size = New System.Drawing.Size(57, 13)
+        LineTotalLabel.TabIndex = 17
+        LineTotalLabel.Text = "Line Total:"
+        '
         'LineTotalTextBox
         '
         Me.LineTotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "LineTotal", True))
-        Me.LineTotalTextBox.Location = New System.Drawing.Point(143, 241)
+        Me.LineTotalTextBox.Location = New System.Drawing.Point(145, 237)
         Me.LineTotalTextBox.Name = "LineTotalTextBox"
         Me.LineTotalTextBox.Size = New System.Drawing.Size(200, 20)
         Me.LineTotalTextBox.TabIndex = 18
         '
+        'RowguidLabel
+        '
+        RowguidLabel.AutoSize = True
+        RowguidLabel.Location = New System.Drawing.Point(14, 266)
+        RowguidLabel.Name = "RowguidLabel"
+        RowguidLabel.Size = New System.Drawing.Size(47, 13)
+        RowguidLabel.TabIndex = 19
+        RowguidLabel.Text = "rowguid:"
+        '
         'RowguidTextBox
         '
         Me.RowguidTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalesOrderDetailBindingSource, "rowguid", True))
-        Me.RowguidTextBox.Location = New System.Drawing.Point(143, 267)
+        Me.RowguidTextBox.Location = New System.Drawing.Point(145, 263)
         Me.RowguidTextBox.Name = "RowguidTextBox"
         Me.RowguidTextBox.Size = New System.Drawing.Size(200, 20)
         Me.RowguidTextBox.TabIndex = 20
         '
+        'ModifiedDateLabel
+        '
+        ModifiedDateLabel.AutoSize = True
+        ModifiedDateLabel.Location = New System.Drawing.Point(14, 293)
+        ModifiedDateLabel.Name = "ModifiedDateLabel"
+        ModifiedDateLabel.Size = New System.Drawing.Size(76, 13)
+        ModifiedDateLabel.TabIndex = 21
+        ModifiedDateLabel.Text = "Modified Date:"
+        '
         'ModifiedDateDateTimePicker
         '
         Me.ModifiedDateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.SalesOrderDetailBindingSource, "ModifiedDate", True))
-        Me.ModifiedDateDateTimePicker.Location = New System.Drawing.Point(143, 293)
+        Me.ModifiedDateDateTimePicker.Location = New System.Drawing.Point(145, 289)
         Me.ModifiedDateDateTimePicker.Name = "ModifiedDateDateTimePicker"
         Me.ModifiedDateDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.ModifiedDateDateTimePicker.TabIndex = 22
@@ -402,7 +402,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(353, 318)
+        Me.ClientSize = New System.Drawing.Size(364, 315)
         Me.Controls.Add(SalesOrderIDLabel)
         Me.Controls.Add(Me.SalesOrderIDTextBox)
         Me.Controls.Add(SalesOrderDetailIDLabel)
